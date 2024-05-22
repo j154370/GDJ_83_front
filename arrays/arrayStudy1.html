@@ -9,19 +9,20 @@
     <script>
         let ar1 = new Array();
         let ar2 = [];
-        let ar3 = [1,2,3];
+        let ar3 = [5,1,3,2,4];
 
         console.log(ar1.length);
 
         //배열 요소의 접근
         //변수명[index 번호]
 
+        ar3.push('a');      //배열의 끝에 요소를 삽입
+        ar3.pop();          //배열의 끝에 요소를 삭제
+        ar3.sort();
+
         for(let i = 0; i < ar3.length; i++){
             console.log(ar3[i]);
         }
-
-
-
 
 
     </script>

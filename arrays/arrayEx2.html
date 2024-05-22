@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <img src="/images/dog1.jpg" id="pic">
+    </div>
+    <button onclick="next()">Next</button>
+
+    <script>
+        let arr = ["dog1.jpg", "dog2.jpg", "dog3.jpg", "dog4.jpg", "dog5.jpg"];
+        const pic = document.getElementById("pic");
+        let num = 0;
+
+
+        function next(){
+            num++;
+            if(num == 0){
+                pic.src = "/images/" + arr[num];
+            }else if(num == 1){
+                pic.src = "/images/" + arr[num];
+            }else if(num == 2){
+                pic.src = "/images/" + arr[num];
+            }else if(num == 3){
+                pic.src = "/images/" + arr[num];
+            }else{
+                pic.src = "/images/" + arr[num];
+                num = 0;
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
