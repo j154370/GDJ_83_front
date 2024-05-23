@@ -19,18 +19,13 @@
 
 
         function next(){
-            num++;
-            if(num == 0){
-                pic.src = "/images/" + arr[num];
-            }else if(num == 1){
-                pic.src = "/images/" + arr[num];
-            }else if(num == 2){
-                pic.src = "/images/" + arr[num];
-            }else if(num == 3){
+            
+            if(num < 4){
+                num++;
                 pic.src = "/images/" + arr[num];
             }else{
-                pic.src = "/images/" + arr[num];
                 num = 0;
+                pic.src = "/images/" + arr[num];
             }
         }
 
