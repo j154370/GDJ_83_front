@@ -6,19 +6,37 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="checkBox" name="ch" id="checkAll">
+    <input onclick="info()" type="checkBox" name="ch" id="checkAll">
     <input type="checkBox" name="ch" class="c">
     <input type="checkBox" name="ch" class="c">
     <input type="checkBox" name="ch" class="c">
     <input type="checkBox" name="ch" class="c">
     <button onclick="info()">CLICK</button>
 
+            <!-- ★★★★★★★ 나중에 다시 풀어보기 ★★★★★★★ -->
 
     <script>
 
         const c = document.getElementsByClassName("c");
         const all = document.getElementById("checkAll");
 
+        
+        for(let i = 0; i < c.length; i++){
+            c[i].addEventListener("click", function(){
+                
+                let flag = true;
+
+                for(let j = 0; j < c.length; j++){
+                    if(c[j].checked == false){
+                        flag = false;
+                        break;
+                    }
+                }
+                    all.checked = flag;
+            })
+        }
+        
+        
         function info(){
 
             if(all.checked == false){
@@ -30,11 +48,7 @@
                     c[i].checked = true;
                 }
             }
-        
         }
-
-        
-
 
     </script>
 

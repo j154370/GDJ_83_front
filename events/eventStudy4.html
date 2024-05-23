@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <button id="b1">CLICK1</button>
+    <!-- <button id="b2">CLICK2</button> -->
+
+    <button class = "bb" title="btn1">BTN1</button>
+    <button class = "bb" title="btn2">BTN2</button>
+    <button class = "bb" title="btn3">BTN3</button>
+
+    <script>
+        const b1 = document.getElementById("b1");
+        const b2 = document.getElementById("b2");
+        const result = document.getElementById("result");
+
+        const bb = document.getElementsByClassName("bb");
+
+        for(let i = 0; i < bb.length; i++){
+            bb[i].addEventListener("click", function(){
+                console.log(bb[i].title);
+            })
+        }
+
+
+        b1.addEventListener("click", function(){
+            result.innerHTML = '<button id = "b2">click</button>'
+        })
+
+        b2.addEventListener("click", function(){
+            //b1.click();
+            console.log("test");
+        })
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
