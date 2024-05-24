@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* span {
+            text-decoration: line-through;
+        } */
+    </style>
+</head>
+<body>
+    
+    <!-- TO DO LIST -->
+
+    <div>
+        <!-- 할 일들을 적고 버튼을 클릭하면 등록 -->
+        <input id="info" type="text">
+        <button id="btn">Add</button>
+    </div>
+
+    <div id="del1">
+        <div>
+            <button>휴지통</button>
+        </div>
+        <div>
+            <input type="checkbox">
+            <span>게임하기</span>
+        </div>
+    </div>
+
+
+    <script>
+        const btn = document.getElementById("btn");
+        const info = document.getElementById("info")
+
+        btn.addEventListener("click", function(){
+            let d = document.createElement("div");
+            let i = document.createElement("input");
+            i.type = "checkbox";
+            i.className = "c";
+            let s = document.createElement("span");
+            let ss = document.createTextNode(info.value);
+            
+            d.appendChild(i);
+            d.appendChild(s);
+            d.appendChild(ss);
+            del1.appendChild(d);
+        })
+
+
+    </script>
+</body>
+</html>

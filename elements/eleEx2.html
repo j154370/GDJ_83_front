@@ -72,13 +72,12 @@
 
             for(let i = 0; i < c1.length; i++){
                 if(c1[i].checked){
-                    //document.getElementById(("remove" + c1[i].id)).remove();
-                    ar.push(c1[i].id);
+                    ar.push(c1[i].getAttribute("data-del"));
                 }
             }
 
             for(let i=0; i < ar.length; i++){
-                    result[i].remove();
+                    document.getElementById(ar[i]).remove();
             }
         }
     )
