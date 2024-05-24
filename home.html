@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* span {
+        .c3 {
             text-decoration: line-through;
-        } */
+        }
     </style>
 </head>
+
 <body>
-    
+
     <!-- TO DO LIST -->
 
     <div>
@@ -34,22 +36,37 @@
     <script>
         const btn = document.getElementById("btn");
         const info = document.getElementById("info")
+        const del1 = document.getElementById("del1");
 
-        btn.addEventListener("click", function(){
+        btn.addEventListener("click", function() {
             let d = document.createElement("div");
             let i = document.createElement("input");
             i.type = "checkbox";
-            i.className = "c";
+            i.classList.add = "c1";
             let s = document.createElement("span");
             let ss = document.createTextNode(info.value);
-            
+            s.classList.add = "c2";
+
+
             d.appendChild(i);
             d.appendChild(s);
             d.appendChild(ss);
             del1.appendChild(d);
+
+        
         })
+
+        del1.addEventListener("click", function(e) {
+                console.log(e);
+                if (e.target.classList.contains("c1")) {
+                    if (e.target.checked == true) {
+                        s.classList.add("c3");
+                    }
+                }
+            })
 
 
     </script>
 </body>
+
 </html>
