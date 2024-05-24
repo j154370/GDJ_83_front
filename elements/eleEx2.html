@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="checkbox" id="checkAll">
+        <button id="btn">DELETE</button>
+    </div>
+    <div class="result" id="remove1">
+        <input type="checkbox" data-del = "1" class="c1">
+        <span>mail title1</span>
+    </div>
+    <div class="result" id="remove2">
+        <input type="checkbox" data-del = "2" class="c1">
+        <span>mail title2</span>
+    </div>
+    <div class="result" id="remove3">
+        <input type="checkbox" data-del = "3" class="c1">
+        <span>mail title3</span>
+    </div>
+    <div class="result" id="remove4">
+        <input type="checkbox" data-del = "4" class="c1">
+        <span>mail title4</span>
+    </div>
+    <div class="result" id="remove5">
+        <input type="checkbox" data-del = "5" class="c1">
+        <span>mail title5</span>
+    </div>
+
+
+    <script>
+        const all = document.getElementById("checkAll");
+        const c1 = document.getElementsByClassName("c1");
+        const btn = document.getElementById("btn");
+        const result = document.getElementsByClassName("result");
+
+        all.addEventListener("click", function(){
+            if(all.checked == false){
+                    for(let i = 0; i < c1.length; i++){
+                        c1[i].checked = false;
+                    }
+                }else{
+                    for(let i = 0; i < c1.length; i++){
+                        c1[i].checked = true;
+                    }
+                }
+            })
+
+            
+            for(let i = 0; i < c1.length; i++){
+                c1[i].addEventListener("click", function(){
+
+                    let flag = true;
+
+                    for(let j = 0; j < c1.length; j++){
+                        if(c1[j].checked == false){
+                            flag = false;
+                            break;
+                        }
+                    }
+                    all.checked = flag;
+                })
+            }
+        
+        btn.addEventListener("click", function(){
+
+            let ar = [];
+
+            for(let i = 0; i < c1.length; i++){
+                if(c1[i].checked){
+                    //result[i].remove();
+                    //document.getElementById(("remove" + c1[i].id)).remove();
+                    ar.push(c1[i].id);
+                }
+            }
+
+            for(let i=0; i < ar.length; i++){
+                    result[i].remove();
+            }
+        }
+    )
+    </script>
+
+</body>
+</html>

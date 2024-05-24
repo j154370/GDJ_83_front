@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="c1" id="result1">
+        <h3>1</h3>
+        <button class="btns" data-del-num = "1">CLICK</button>
+    </div>
+    <div class="c1" id="result2">
+        <h3>2</h3>
+        <button class="btns" data-del-num = "2">CLICK</button>
+    </div>
+    <div class="c1" id="result3">
+        <h3>3</h3>
+        <button class="btns" data-del-num = "3">CLICK</button>
+    </div>
+    <div class="c1" id="result4">
+        <h3>4</h3>
+        <button class="btns" data-del-num = "4">CLICK</button>
+    </div>
+
+    <script>
+        const btns = document.getElementsByClassName("btns");
+        //const c1 = document.getElementsByClassName("c1");
+
+        for(let i = 0; i < btns.length; i++){
+            btns[i].addEventListener("click", function(){
+                //console.log(this.getAttribute("data-del-num")); data를 커스텀하면 getAttribute로 가져와야 한다
+                document.getElementById("result" + this.getAttribute("data-del-num")).remove();
+            })
+        }
+
+
+
+    </script>
+</body>
+</html>
